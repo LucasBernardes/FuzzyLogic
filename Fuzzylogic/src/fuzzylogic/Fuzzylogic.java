@@ -17,6 +17,7 @@ public class Fuzzylogic {
     public static void main(String[] args) {
         // TODO code application logic here
         System.out.println("Start");
+        System.out.println("Agora que o git ta rodando vai funfa o trab");
     }
     
 }
