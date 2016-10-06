@@ -19,7 +19,7 @@ public class Fuzzylogic {
      */
     public static void main(String[] args) throws Exception {
         // Load from 'FCL' file
-        String fileName = "/home/dric0/NetBeansProjects/FuzzyLogic/tipper.fcl";
+        String fileName = "/home/dric0/NetBeansProjects/trabWiga/FuzzyLogic/Fuzzylogic/tipper.fcl";
         FIS fis = FIS.load(fileName,true);
 
         // Error while loading?
@@ -33,15 +33,19 @@ public class Fuzzylogic {
         JFuzzyChart.get().chart(functionBlock);
 
         // Set inputs
-        fis.setVariable("service", 3);
-        fis.setVariable("food", 7);
+        fis.setVariable("behavior", 9.5);
+        fis.setVariable("age", 30);
+        fis.setVariable("education", 18);
+        fis.setVariable("publicity", 51);
+        //fis.setVariable("service", 3);
+        //fis.setVariable("food", 7);
 
         // Evaluate
         fis.evaluate();
 
         // Show output variable's chart
-        Variable tip = functionBlock.getVariable("tip");
-        JFuzzyChart.get().chart(tip, tip.getDefuzzifier(), true);
+        Variable score = functionBlock.getVariable("score");
+        JFuzzyChart.get().chart(score, score.getDefuzzifier(), true);
 
         // Print ruleSet
         System.out.println(fis);

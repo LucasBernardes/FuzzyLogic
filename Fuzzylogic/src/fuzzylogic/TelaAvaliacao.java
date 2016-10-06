@@ -122,10 +122,10 @@ public class TelaAvaliacao extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        int edu = Integer.parseInt(jTextField1.getText());
-        int pub = Integer.parseInt(jTextField2.getText());
-        int beh = Integer.parseInt(jTextField3.getText());
-        int age = Integer.parseInt(jTextField4.getText());
+        float edu = Float.parseFloat(jTextField1.getText());
+        float pub = Float.parseFloat(jTextField2.getText());
+        float beh = Float.parseFloat(jTextField3.getText());
+        float age = Float.parseFloat(jTextField4.getText());
         if((edu >= 0) && (edu<= 20)){
             if ((pub >= 0) && (pub<= 100)){
                 if ((beh >= 0) && (beh<= 10)){
@@ -177,11 +177,11 @@ public class TelaAvaliacao extends javax.swing.JFrame {
             }
         });
     }
-    public void avalia(int b, int a, int p, int e){
+    public void avalia(float b, float a, float p, float e){
         /* Create and display the form */
         // Load from 'FCL' file
         //String fileName = "/home/dric0/NetBeansProjects/FuzzyLogic/tipper.fcl";
-        String fileName = "C:/Users/Lucas/Desktop/A/FuzzyLogic/Fuzzylogic/txt.fcl";
+        String fileName = "/home/dric0/NetBeansProjects/trabWiga/FuzzyLogic/Fuzzylogic/tipper.fcl";
         FIS fis = FIS.load(fileName,true);
 
         // Error while loading?
